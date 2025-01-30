@@ -1,0 +1,203 @@
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0d6efd;
+  padding: 8px 16px;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.project-link:hover .project-link {
+  background-color: #0d6efd;
+  color: white;
+  text-decoration: none;
+}
+
+.project-previews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 2rem;
+}
+
+.preview-item {
+  flex: 1 1 calc(33.333% - 27px);
+  min-width: 250px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.preview-item::after {
+  font-family: "Font Awesome 6 Free", "FontAwesome";
+  font-weight: 900;
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  font-size: 3.5rem;
+  opacity: 0.1;
+  z-index: -1;
+  transition: opacity 0.2s ease;
+}
+
+/* Migros ONE projeleri için */
+.project-card:nth-child(2) .project-previews .preview-item:nth-child(1)::after {
+  content: "\f291"; /* shopping-basket */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(2) .project-previews .preview-item:nth-child(2)::after {
+  content: "\f787"; /* carrot */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(2) .project-previews .preview-item:nth-child(3)::after {
+  content: "\f54e"; /* store */
+  color: #0d6efd;
+}
+
+/* EKIP.CO projeleri için */
+.project-card:nth-child(3) .project-previews .preview-item:nth-child(1)::after {
+  content: "\f072"; /* plane */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(3) .project-previews .preview-item:nth-child(2)::after {
+  content: "\f4de"; /* truck */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(3) .project-previews .preview-item:nth-child(3)::after {
+  content: "\f1e3"; /* soccer-ball */
+  color: #0d6efd;
+}
+
+/* Freelance projeleri için */
+.project-card:nth-child(4) .project-previews .preview-item:nth-child(1)::after {
+  content: "\f1ad"; /* building */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(4) .project-previews .preview-item:nth-child(2)::after {
+  content: "\f201"; /* chart-line */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(4) .project-previews .preview-item:nth-child(3)::after {
+  content: "\f6e3"; /* construction */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(4) .project-previews .preview-item:nth-child(4)::after {
+  content: "\f0ad"; /* wrench */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(4) .project-previews .preview-item:nth-child(5)::after {
+  content: "\f7d9"; /* tools */
+  color: #0d6efd;
+}
+
+/* PTTrade projeleri için */
+.project-card:nth-child(5) .project-previews .preview-item:nth-child(1)::after {
+  content: "\f54e";  /* store */
+  color: #0d6efd;
+}
+
+.project-card:nth-child(5) .project-previews .preview-item:nth-child(2)::after {
+  content: "\f15b";  /* file */
+  color: #0d6efd;
+}
+
+.preview-item:hover::after {
+  opacity: 0.25;
+}
+
+.preview-item-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.preview-item h4 {
+  color: #212529;
+  font-size: 1.2rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .preview-item {
+    flex: 1 1 100%;
+  }
+
+  .preview-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .project-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.project-card h3 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.project-card h3::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #0d6efd 0%,
+    rgba(13, 110, 253, 0.1) 100%
+  );
+}
+
+@media (max-width: 992px) {
+  .project-card h3::after {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card h3::after {
+    width: 150px;
+  }
+}
+
+.project-card:nth-child(2) .preview-item,
+.project-card:nth-child(3) .preview-item,
+.project-card:nth-child(5) .preview-item {
+  flex: 0 1 300px;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .project-card:nth-child(2) .preview-item,
+  .project-card:nth-child(3) .preview-item,
+  .project-card:nth-child(5) .preview-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

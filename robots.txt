@@ -1,0 +1,28 @@
+# www.emrebaris.com robots.txt dosyası
+
+# Tüm robotlar için kurallar
+User-agent: *
+
+# İzin verilen sayfalar
+Allow: /
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Yasaklanan dizinler
+Disallow: /private/
+Disallow: /temp/
+Disallow: /admin/
+
+# Medya dosyaları için özel kurallar
+Allow: /assets/img/*.jpg
+Allow: /assets/img/*.png
+Allow: /assets/img/*.webp
+Allow: /assets/img/*.ico
+
+# Site haritası
+Sitemap: https://emrebaris.com/sitemap.xml
+
+# Tarama gecikmesi (saniye)
+Crawl-delay: 10 
